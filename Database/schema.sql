@@ -1,0 +1,12 @@
+CREATE DATABASE dashboard_builder;
+
+USE dashboard_builder;
+
+CREATE TABLE layouts (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(255) NOT NULL DEFAULT 'Untitled Dashboard',
+    layout_data LONGTEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ON UPDATE CURRENT_TIMESTAMP
+);

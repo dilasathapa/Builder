@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Builder</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/5.3.1/fabric.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="topbar">
+
+    <div class="brand">
+        Dashboard Builder
+    </div>
+
+    <div class="header-actions">
+
+        <button id="newDashboard">
+            + New Dashboard
+        </button>
+
+        <button id="clearCanvas">
+            Clear Canvas
+        </button>
+
+        <button id="saveLayout">
+            Save Layout
+        </button>
+
+    </div>
+
+</header>
+
+<div class="main-layout">
+
+    <aside class="left-panel">
+
+        <h3>Tools</h3>
+
+        <button id="addText">📝 Text</button>
+
+        <button id="addChart">
+            📊 Chart
+        </button>
+
+        <label class="upload-btn">
+            🖼️  Add Image
+            <input
+                type="file"
+                id="imageUpload"
+                hidden
+            >
+        </label>
+
+        
+
+        <hr>
+
+        <button disabled>Shape</button>
+
+        <button disabled>Pen</button>
+
+        <button disabled>Link</button>
+
+        <button disabled>Search</button>
+
+    </aside>
+
+    <main class="center-panel">
+
+        <div class="canvas-wrapper">
+
+            <canvas
+                id="dashboardCanvas"
+                width="full"
+                height="full">
+            </canvas>
+
+        </div>
+
+    </main>
+
+    <aside class="right-panel">
+
+        <h3>Properties</h3>
+
+        <button id="boldBtn">
+            Bold
+        </button>
+
+        <button id="italicBtn">
+            Italic
+        </button>
+
+        <select id="fontSize">
+
+            <option value="16">16px</option>
+            <option value="20">20px</option>
+            <option value="24">24px</option>
+            <option value="32">32px</option>
+            <option value="40">40px</option>
+
+        </select>
+
+        <hr>
+
+        
+
+    </aside>
+
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
